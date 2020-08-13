@@ -1,0 +1,232 @@
+:root {
+  --pink-color: rgb(192, 55, 255);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*:focus {
+  outline: none;
+}
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #fff;
+  /* position: relative; */
+}
+strong {
+  display: inline;
+  color: red;
+}
+.top-section-container {
+  background: url(./assets/11.jpg) no-repeat center center/cover;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top-section {
+  /* background-color: rgba(255, 211, 16, 0.575); */
+  padding: 4rem 8rem;
+  border-radius: 10px;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section-title {
+  color: #fff;
+  position: absolute;
+  top: 5rem;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: rgba(0, 0, 0, 0.466);
+  padding: 1rem 3rem;
+  border-radius: 6px;
+  text-align: center;
+  white-space: nowrap;
+}
+.input-box {
+  width: 100%;
+  position: relative;
+  min-width: 322px;
+}
+#search-box {
+  font-size: 1rem;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  padding: 1rem 2rem;
+  width: 100%;
+  color: #444;
+}
+.search-btn {
+  position: absolute;
+  border-radius: 30px;
+  border: 1px solid var(--pink-color);
+  background-color: var(--pink-color);
+  padding: 11px 1rem;
+  color: #fff;
+  top: 4px;
+  right: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.search-btn:hover {
+  opacity: 0.8;
+}
+
+/*! results section  */
+.result-container {
+  max-width: 85vw;
+  margin: 2rem auto;
+  text-align: center;
+}
+.res-empty{
+  display: block;
+}
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+.result-item {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(202, 199, 199);
+  padding: 1rem 0 1rem 10px;
+  text-align: center;
+  
+}
+.result-item:hover {
+  background-color: rgba(226, 233, 219, 0.87);
+}
+.result-item:last-child {
+  border-bottom: none;
+}
+.result-item-text {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.result-item-btn {
+  background-color: var(--pink-color);
+  border: 1px solid var(--pink-color);
+  border-radius: 8px;
+  padding: 10px 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.result-item-btn:hover {
+  transform: scale(0.92);
+}
+.nav-btns {
+  margin: 1rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-btn {
+  padding: 8px 14px;
+  text-align: center;
+  margin: 0 1rem;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+ 
+}
+.nav-btn:hover {
+  opacity: 0.8;
+}
+.prev-btn {
+  background-color: rgb(255, 78, 78);
+  border: 1px solid rgb(255, 78, 78);
+
+}
+.next-btn {
+  background-color: rgb(67, 189, 97);
+  border: 1px solid rgb(67, 189, 97);
+  
+}
+/* lyrics section */
+.lyrics-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.lyrics-container h1 {
+  padding: 2rem 0;
+  color: #ff3a5b;
+}
+.lyrics{
+  margin: 2rem 0;
+  
+}
+.lyrics-text{
+  line-height: 1.8;
+  color: #444;
+  font-size: 1.2rem;
+}
+@media (max-width: 839px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .result-item-text {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 389px) {
+  .section-title {
+    font-size: 1.2rem;
+    white-space: normal;
+  }
+  .result-item {
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(202, 199, 199);
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 328px) {
+  .top-section-container {
+    height: 100vh;
+  }
+  .input-box {
+    min-width: 200px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #search-box {
+    font-size: 0.7rem;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    padding: 15px 0rem 15px 0.2rem;
+  }
+  .search-btn {
+    position: absolute;
+    border-radius: 30px;
+    border: 1px solid rgb(192, 55, 255);
+    background-color: rgb(192, 55, 255);
+    padding: 11px 10px;
+    color: #fff;
+    top: 3px;
+    right: 3px;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+}
